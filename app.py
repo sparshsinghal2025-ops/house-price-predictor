@@ -64,7 +64,7 @@ if submit_button:
         user_inputs_scaled = scaler.transform(user_inputs_processed)
         predicted_raw = model.predict(user_inputs_scaled)
         
-        predicted_price = float(predicted_raw)
+        predicted_price = float(predicted_raw[0])
         st.success(f"### 🎉 Estimated Evaluation Value: ${predicted_price:,.2f}")
         
         # Market context chart
